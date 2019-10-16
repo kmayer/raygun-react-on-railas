@@ -14,6 +14,6 @@ task :jest do
   sh "yarn jest"
 end
 
-task :eslint do
+task :lint do
   sh "yarn lint"
 end
