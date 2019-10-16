@@ -16,6 +16,7 @@ gem "react_on_rails", "11.1.4" # Update to the current version
 gem "autoprefixer-rails"
 gem "bootstrap", "~> 4.3.1"
 gem "jquery-rails"
+gem "mini_racer", platforms: :ruby
 gem "sassc-rails"
 gem "simple_form"
 gem "slim-rails"
@@ -62,5 +63,3 @@ group :test do
   gem "simplecov"
   gem "webdrivers"
 end
-
-gem 'mini_racer', platforms: :ruby
