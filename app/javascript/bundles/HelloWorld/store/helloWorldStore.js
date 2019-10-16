@@ -1,5 +1,7 @@
-import { createStore } from 'redux';
-import helloWorldReducer from '../reducers/helloWorldReducer';
+import {combineReducers, createStore} from 'redux';
+import updateName from '../reducers/helloWorldReducer';
+
+const helloWorldReducer = combineReducers({ name: updateName });
 
 const configureStore = (railsProps) => (
   createStore(helloWorldReducer, railsProps)
