@@ -7,9 +7,13 @@ RaygunReactOnRails::Application.load_tasks
 
 if Rails.env.development? || Rails.env.test?
   Rake::Task[:default].clear_prerequisites
-  task default: %i[spec jest rubocop]
+  task default: %i[spec jest rubocop eslint]
 end
 
 task :jest do
   sh "yarn jest"
+end
+
+task :eslint do
+  sh "yarn lint"
 end
