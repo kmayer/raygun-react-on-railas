@@ -1,8 +1,13 @@
-import { combineReducers, createStore } from "redux";
-import updateName from "../reducers/helloWorldReducer";
+import { combineReducers } from "redux";
+import { configureStore } from "redux-starter-kit";
+import updateName from "./helloWordSlice";
+// import otherReducer from "../reducers/someOtherReduer";
 
-const helloWorldReducer = combineReducers({ name: updateName });
+const rootReducer = combineReducers({name: updateName});
 
-const configureStore = railsProps => createStore(helloWorldReducer, railsProps);
+const helloWorldStore = railsProps => configureStore({
+    reducer: rootReducer,
+    preloadedState: railsProps
+});
 
-export default configureStore;
+export default helloWorldStore;
