@@ -30,6 +30,7 @@
   },
   "scripts": {
     "test": "jest",
+    "test:coverage": "jest --coverage",
     "lint": "npm-run-all -c lint:*",
     "lint:js": "eslint app/javascript/**/*.{js,jsx}",
     "lint:css": "stylelint --allow-empty-input 'app/{javascript,assets/stylesheets}/**/*.scss'"
