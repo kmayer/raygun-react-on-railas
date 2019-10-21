@@ -127,10 +127,7 @@ module.exports = {
   // rootDir: null,
 
   // A list of paths to directories that Jest should use to search for files in
-  roots: [
-    "app/javascript",
-    "app/assets/javascripts"
-  ],
+  roots: ["app/javascript", "app/assets/javascripts"],
 
   // Allows you to use a custom runner instead of Jest's default test runner
   // runner: "jest-runner",
@@ -139,7 +136,7 @@ module.exports = {
   // setupFiles: [],
 
   // A list of paths to modules that run some code to configure or set up the testing framework before each test
-  // setupFilesAfterEnv: [],
+  setupFilesAfterEnv: ["<rootDir>/app/javascript/tests/setupTests.js"],
 
   // A list of paths to snapshot serializer modules Jest should use for snapshot testing
   // snapshotSerializers: [],
@@ -160,11 +157,7 @@ module.exports = {
   // ],
 
   // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
-  testPathIgnorePatterns: [
-    "/config/webpack/",
-    "/node_modules/",
-    "vendor"
-  ],
+  testPathIgnorePatterns: ["/config/webpack/", "/node_modules/", "vendor"]
 
   // The regexp pattern or array of patterns that Jest uses to detect test files
   // testRegex: [],
