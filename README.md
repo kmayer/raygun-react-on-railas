@@ -1,4 +1,4 @@
-# AppPrototype
+# App Prototype
 
 ...
 
