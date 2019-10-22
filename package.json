@@ -45,11 +45,18 @@
     "webpack-dev-server": "^3.8.2"
   },
   "scripts": {
-    "test": "jest",
+    "start": "heroku local",
+    "dev": "heroku local -f Procfile.dev",
+    "dev:hmr": "heroku local -f Procfile.dev-server",
+    "test": "jest --watch",
+    "test:once": "jest",
     "test:coverage": "jest --coverage",
     "test:ci": "jest --ci --coverage --color --runInBand",
     "lint": "npm-run-all -c lint:*",
     "lint:js": "eslint 'app/javascript/**/*.{js,jsx}'",
-    "lint:css": "stylelint --allow-empty-input 'app/{javascript,assets/stylesheets}/**/*.scss'"
+    "lint:css": "stylelint --allow-empty-input 'app/{javascript,assets/stylesheets}/**/*.scss'",
+    "de-lint": "npm-run-all -c de-lint:*",
+    "de-lint:js": "eslint --fix 'app/javascript/**/*.{js,jsx}'",
+    "de-lint:css": "stylelint --fix --allow-empty-input 'app/{javascript,assets/stylesheets}/**/*.scss'"
   }
 }
