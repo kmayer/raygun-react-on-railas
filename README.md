@@ -1,4 +1,4 @@
-# Raygun React On Rails
+# AppPrototype
 
 ...
 

@@ -1,12 +1,24 @@
 require_relative "boot"
 
-require "rails/all"
+# Pick the frameworks you want:
+require "action_cable/engine"
+require "action_controller/railtie"
+require "action_mailbox/engine"
+require "action_mailer/railtie"
+require "action_text/engine"
+require "action_view/railtie"
+require "active_job/railtie"
+require "active_model/railtie"
+require "active_record/railtie"
+require "active_storage/engine"
+# require "rails/test_unit/railtie"
+# require "sprockets/railtie"
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-module RaygunReactOnRails
+module AppPrototype
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
@@ -14,7 +26,7 @@ module RaygunReactOnRails
     # Enable/disable generators.
     config.generators do |g|
       # Core Rails
-      # g.orm              :active_record, primary_key_type: :uuid
+      g.orm              :active_record, primary_key_type: :uuid
       g.javascripts      false
       g.stylesheets      false
       g.helper           false

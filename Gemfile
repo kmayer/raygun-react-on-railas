@@ -13,7 +13,6 @@ gem "rails", "~> 6.0.0"
 gem "react_on_rails", "11.1.4" # Update to the current version
 
 # Front-endy
-gem "autoprefixer-rails"
 gem "bootstrap", "~> 4.3.1"
 gem "jquery-rails"
 gem "mini_racer", platforms: :ruby

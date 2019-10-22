@@ -3,7 +3,7 @@
 
 require File.expand_path("config/application", __dir__)
 
-RaygunReactOnRails::Application.load_tasks
+AppPrototype::Application.load_tasks
 
 if Rails.env.development? || Rails.env.test?
   Rake::Task[:default].clear_prerequisites
